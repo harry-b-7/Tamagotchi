@@ -25,11 +25,13 @@ class TamagotchiTests: XCTestCase {
         XCTAssertEqual(tamagotchi.hunger, 5)
     }
     
-    func testTamagotchiNameIsCreatedAsUserInput() {
+    func testTamagotchiEatSnackReducesHungerAndIncreasesWeight() {
         //arrange
-        //act
         let tamagotchi = Tamagotchi()
+        //act
+        tamagotchi.eatSnack()
         //assert
-        XCTAssertEqual(tamagotchi.name, "Sarah")
+        XCTAssertEqual(tamagotchi.weight, 7)
+        XCTAssertEqual(tamagotchi.hunger, 4)
     }
 }
